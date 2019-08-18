@@ -4,7 +4,6 @@ import 'package:resepmau_flutter/presenters/login_activity_presenter.dart';
 import 'package:toast/toast.dart';
 import 'package:resepmau_flutter/register_act.dart';
 import 'package:resepmau_flutter/main.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginActivity extends StatefulWidget {
 

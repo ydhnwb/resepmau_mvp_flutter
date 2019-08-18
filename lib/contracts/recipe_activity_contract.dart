@@ -1,5 +1,3 @@
-import 'package:resepmau_flutter/models/post.dart';
-
 class RecipeActivityInteractor {
   void create(String title, String content){}
 

@@ -1,5 +1,3 @@
-import 'package:resepmau_flutter/models/user.dart';
-
 
 class RegisterActivityInteractor {
   void register(String name, String email, String password) {}

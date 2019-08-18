@@ -63,8 +63,22 @@ class _MyHomePageState extends State<MyHomePage> implements MainActivityView{
           IconButton(
             icon: Icon(Icons.close),
             onPressed: () {
-              _logout();
-              Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => LoginActivity()), (r) =>false);
+              showDialog(
+                context: context,
+                builder: (BuildContext context){
+                  return AlertDialog(
+                    content: Text("Are you sure want to logout?"),
+                    actions: <Widget>[
+                      FlatButton(
+                        child: Text("SIGN OUT"),
+                        onPressed: (){
+                          _logout();
+                          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => LoginActivity()), (r) =>false);
+                        },
+                      ),
+                    ]
+                  );
+                });
             },
           ),
         ],
@@ -75,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> implements MainActivityView{
           switch (snapshot.connectionState) {
             case ConnectionState.none:
             case ConnectionState.waiting:
-              return new Text('loading...');
+              return Center(child: CircularProgressIndicator(),);
             default:
               if (snapshot.hasError)
                 return new Text('Error: ${snapshot.error}');
@@ -145,6 +159,4 @@ class _MyHomePageState extends State<MyHomePage> implements MainActivityView{
       itemCount: ps.length,
     );
   }
-
-
 }

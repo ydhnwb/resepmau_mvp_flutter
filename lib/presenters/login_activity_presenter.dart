@@ -1,4 +1,3 @@
-import 'package:resepmau_flutter/converters/wrapped_response.dart';
 import 'package:resepmau_flutter/models/user.dart';
 import 'package:resepmau_flutter/contracts/login_activity_contract.dart';
 import 'package:shared_preferences/shared_preferences.dart';

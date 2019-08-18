@@ -1,9 +1,5 @@
 import 'package:resepmau_flutter/contracts/main_activity_contract.dart';
-import 'package:http/http.dart' as http;
-import 'package:resepmau_flutter/converters/wrapped_response.dart';
 import 'package:resepmau_flutter/models/post.dart';
-import 'package:resepmau_flutter/api/api.dart';
-import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dio/dio.dart';
 import 'package:resepmau_flutter/webservices/api_service.dart';
