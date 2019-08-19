@@ -14,7 +14,7 @@ class _RegisterActivityState extends State<RegisterActivity> implements Register
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController =TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  
+
   @override
   void initState() {
     super.initState();
@@ -22,7 +22,6 @@ class _RegisterActivityState extends State<RegisterActivity> implements Register
   }
 
   void _doRegister(String name, String email, String password){
-    print("$name $email $password");
     if(name.isNotEmpty && email.isNotEmpty && password.isNotEmpty){
       if(name.length > 5){
         if(password.length > 8){

@@ -29,8 +29,6 @@ class MainActivityPresenter implements MainActivityInteractor {
     return posts;
   }
 
-
   @override
   void destroy() => view = null;
-
 }

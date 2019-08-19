@@ -27,7 +27,6 @@ class _LoginActivityState extends State<LoginActivity> implements LoginActivityV
       toast("Password berisi setidaknya 8 karakter");
       return;
     }
-    print(email +" - "+password);
     presenter.login(email, password);
   }
 

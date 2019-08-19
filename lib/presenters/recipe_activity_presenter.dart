@@ -49,7 +49,6 @@ class RecipeActivityPresenter implements RecipeActivityInteractor{
     var post = Post.all(int.parse(id), title, content);
     var token = await getToken();
     token = "Bearer $token";
-    print("Presenter $token - $id - $title - $content");
     var body = post.toJson();
     await api.updatePost(token, id, body).then((it) {
       if(it.status == "1"){
@@ -59,14 +58,7 @@ class RecipeActivityPresenter implements RecipeActivityInteractor{
         view?.toast("Failed to update");
       }
     }).catchError((Object e){
-      switch (e.runtimeType) {
-        case DioError:
-          print(e.toString());
-          final res = (e as DioError).response;
-          print("Got error : ${res.statusCode} -> ${res.statusMessage}");
-          break;
-        default:
-      }
+      print(e);
     });
   }
 

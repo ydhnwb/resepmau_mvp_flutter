@@ -12,7 +12,6 @@ class LoginActivityPresenter implements LoginActivityInteractor {
   @override
   void success(String token) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    print("token is $token");
     await prefs.setString("api_token", token);
   }
 
@@ -23,9 +22,7 @@ class LoginActivityPresenter implements LoginActivityInteractor {
   void login(String email, String password) async {
     await api.login(email, password).then((it){
       if(it.status == "1"){
-        print(it.message);
         User u = User.fromJson(it.data);
-        print("token is a ${u.api_token}");
         this.success(u.api_token);
         view?.finish();
       }else{
