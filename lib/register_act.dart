@@ -14,7 +14,7 @@ class _RegisterActivityState extends State<RegisterActivity> implements Register
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController =TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
+  
   @override
   void initState() {
     super.initState();
@@ -52,7 +52,7 @@ class _RegisterActivityState extends State<RegisterActivity> implements Register
             Text("You need to fill all these form to use this application. Please note that password must be 8 char or more"),
             Container(
               padding: EdgeInsets.only(top: 16.0),
-              child:Text("FULL NAME", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.redAccent, fontSize: 15.0,),
+              child:Text("FULL NAME", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent, fontSize: 15.0,),
               ),
             ),
 
@@ -69,7 +69,7 @@ class _RegisterActivityState extends State<RegisterActivity> implements Register
 
             Container(
               padding: EdgeInsets.only(top: 16.0),
-              child:Text("EMAIL", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.redAccent, fontSize: 15.0,),
+              child:Text("EMAIL", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent, fontSize: 15.0,),
               ),
             ),
             TextField(
@@ -85,7 +85,7 @@ class _RegisterActivityState extends State<RegisterActivity> implements Register
 
             Container(
               padding: EdgeInsets.only(top: 16.0),
-              child:Text("PASSWORD", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.redAccent, fontSize: 15.0,),
+              child:Text("PASSWORD", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueAccent, fontSize: 15.0,),
               ),
             ),
             TextField(
