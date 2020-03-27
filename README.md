@@ -1,6 +1,6 @@
 # A Basic Flutter App (CRUD and Login/Register) using MVP design pattern
 This is a simple android app with basic function like crud and login - register<br>
-with Model-View-Presenter Architecture Pattern
+with Model-View-Presenter Peresentation Pattern
 
 ## For the API you can use our api at https://resep-mau.herokuapp.com/api/ <br>
 ## thanks to <a href="https://github.com/royhan31">royhan31</a> for api
